@@ -1,0 +1,23 @@
+
+auth:
+  enablePostgresUser: true
+  database: mtiglobal
+  username: global1
+  password: Gl0b@lA1123456 
+  postgresPassword: SuperGl0b@llA11P@ss123456
+primary:
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 4Gi
+    requests:
+      cpu: 1000m
+      memory: 2Gi
+readReplicas:
+  resources:
+    requests:
+      cpu: "500m"  # Request half a CPU core
+      memory: "1Gi"  # Request 1 GiB of memory
+    limits:
+      cpu: "1"  # Limit to 1 CPU core
+      memory: "1Gi"  # Limit to 1 GiB of memory
